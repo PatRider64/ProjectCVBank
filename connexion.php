@@ -15,6 +15,7 @@
         <a href="creationOffre.php">Créer une offre</a>
         <a href="voirOffre.php">Voir les offres</a>
         <a href="connexion.php">Connexion</a>
+        <a href="monProfil.php">Mon Profil</a>
     </nav>
     <main>
         <div class="login-form">
@@ -23,8 +24,7 @@
             {
                 $err = htmlspecialchars($_GET['login_err']);
 
-                switch($err)
-                {
+                switch($err) {
                     case 'password':
                         ?>
                         <div class="alert alert-danger">
@@ -53,7 +53,7 @@
             ?>
             <div class = form>
                 <h2 class="text-center">Connexion</h2>
-                <form action="connexion.php" method="post">
+                <form action="connexion_traitement.php" method="post">
                     <div class="form-group">
                         E-Mail: <input type="text" name="email"><br>
                     </div>

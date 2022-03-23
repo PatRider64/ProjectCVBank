@@ -9,6 +9,10 @@ nav a {
     margin-right: 10px;
 }
 
+main {
+    height: 500px;
+}
+
 .form-group {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -38,16 +42,8 @@ nav a {
     padding: 30px;
 }
 
-.offre-vue {
-
-}
-
 .corps {
     background-color: white;
-}
-
-.form-group {
-
 }
 
 .text-center {
@@ -56,11 +52,16 @@ nav a {
 .text-center a {
     color: black;
     text-decoration: none;
+    padding-left: 20px;
 }
 
 #logo {
     font-size: 40px;
     font-family: Arial;
+}
+
+.titre {
+    font-size: 20px;
 }
 
 footer {

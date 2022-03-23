@@ -15,6 +15,7 @@
             <a href="creationOffre.php">Créer une offre</a>
             <a href="voirOffre.php">Voir les offres</a>
             <a href="connexion.php">Connexion</a>
+            <a href="monProfil.php">Mon Profil</a>
         </nav>
         <main>
             <div class="login-form">

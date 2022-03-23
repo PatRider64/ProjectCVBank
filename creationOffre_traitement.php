@@ -6,7 +6,7 @@ if(!empty($_POST['name']) && !empty($_POST['description']) && !empty($_POST['com
     $description = htmlspecialchars($_POST['description']);
     $competences = htmlspecialchars($_POST['competences']);
 
-        if (strlen($name) <= 10){
+        if (strlen($name) <= 100){
             if (strlen($description) <= 500) {
                 if (strlen($competences) <= 200) {
                             $insert = $bdd->prepare('INSERT INTO offre(nomOffre, description, competencesRequises) VALUES(:name, :description, :competences)');

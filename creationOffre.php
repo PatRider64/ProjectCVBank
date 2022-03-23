@@ -15,6 +15,7 @@
                 <a href="creationOffre.php">Créer une offre</a>
                 <a href="voirOffre.php">Voir les offres</a>
                 <a href="connexion.php">Connexion</a>
+                <a href="monProfil.php">Mon Profil</a>
             </nav>
             <main>
                 <div class="offre-form">
@@ -57,7 +58,7 @@
                     }
                     ?>
 
-                    <form action="creation_traitement.php" method="post">
+                    <form action="creationOffre_traitement.php" method="post">
                         <h1 class="text-center">Création d'une offre</h1>
                         <div class = creation>
                             <div class="form-group">
