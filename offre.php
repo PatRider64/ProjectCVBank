@@ -11,7 +11,18 @@ $offre = $listeOffre->fetch();
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <title>Offre</title>
+        <script>
+            function depotCV() {
+                $.ajax({
+                    url:"acceptationDepot.php",
+                    type: "POST",
+                    success:function(result){
+                        alert(result);
+                    }
+                });
+        </script>
     </head>
 
     <body>
@@ -40,41 +51,6 @@ $offre = $listeOffre->fetch();
             </div>
         </div>
         <button onclick="depotCV">Déposer votre CV</button>
-
-        <script>
-            function depotCV() {
-                <?php
-                session_start();
-                $clientConnexion = $bdd->prepare("SELECT * FROM cv where idClient = :idClient");
-                $clientConnexion->bindParam("idClient", $_GET["idClient"]);
-                $clientConnexion->execute();
-                $cv = $clientConnexion->fetch();
-
-                if (!isset($_SESSION['user'])) {
-                ?>
-                <div class="text-center">
-                    <p>Vous vous n'êtes pas connecté</p><br>
-                    <a href="connexion.php">Se connecter</a>
-                </div>
-                <?php
-                }
-                if ($cv['idClient'] == null) {
-                    ?>
-                <div class="text-center">
-                    <p>Vous n'avez pas encore créez de cv</p><br>
-                    <a href="creationCV.php">Créer un CV</a>
-                </div>>
-                <?php
-                }
-                else {
-                    $cv['idOffre'] = $_GET[idOffre];
-                    ?>
-                    <p>Votre CV a été déposé avec succés!</p>
-                <?php
-                }
-                ?>
-            }
-        </script>
     </main>
     <footer>
         <p>Références</p>
