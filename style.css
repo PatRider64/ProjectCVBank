@@ -10,7 +10,7 @@ nav a {
 }
 
 main {
-    height: 500px;
+    height: 625px;
 }
 
 .form-group {
@@ -18,9 +18,14 @@ main {
     margin-top: 5px;
 }
 
+.cv-group {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
 .offre-form {
     width: 700px;
-    margin: 50px auto;
+    margin: 40px auto;
 }
 
 .offre-form form {
@@ -42,7 +47,7 @@ main {
     padding: 30px;
 }
 
-.corps {
+body {
     background-color: white;
 }
 

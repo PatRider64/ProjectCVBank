@@ -15,7 +15,7 @@
     <link rel="stylesheet" href=style.css>
 </head>
 
-<body class="corps">
+<body>
     <header>
         <h1 id="logo">CVBank</h1>
     </header>
@@ -33,7 +33,7 @@
                     if (!isset($_SESSION['user'])) {
                         ?>
                     <div class="text-center">
-                        <h1>Vous vous n'êtes pas connectés</h1><br>
+                        <h1>Vous vous n'êtes pas connecté</h1><br>
                         <a href="connexion.php">Se connecter</a>
                     </div>
                     <?php
@@ -42,7 +42,7 @@
                         ?>
                         <div class="text-center">
                             <h2>Bonjour <?php echo $data['prenom'], ' ', $data['nom']; ?> !</h2><br>
-                            <a href="voirCV.php">Voir votre CV</a>
+                            <a href="voirCV.php?idClient=<?=$data['idClient']?>">Voir votre CV</a>
                             <a href="creationCV.php">Créez votre CV</a>
                             <hr/>
                             <a href="deconnexion.php" class="btn btn-danger btn-lg">Déconnexion</a>
