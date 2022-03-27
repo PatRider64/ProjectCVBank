@@ -5,7 +5,8 @@ $req = $bdd->prepare('SELECT idClient, nom, prenom, email FROM client WHERE toke
 $req->execute(array($_SESSION['user']));
 $data = $req->fetch();
 
-if (!empty($_POST['formation']) && !empty($_POST['experience']) && !empty($_POST['competences']) && !empty($_POST['telephone']) && !empty($_POST['interets']) && !empty($_POST['langues'])) {
+if (!empty($_POST['formation']) && !empty($_POST['experience']) && !empty($_POST['competences']) && !empty($_POST['telephone']) && !empty($_POST['interets']) 
+&& !empty($_POST['langues'])) {
     $formation = htmlspecialchars($_POST['formation']);
     $experience = htmlspecialchars($_POST['experience']);
     $competences = htmlspecialchars($_POST['competences']);
@@ -19,7 +20,8 @@ if (!empty($_POST['formation']) && !empty($_POST['experience']) && !empty($_POST
                 if (strlen($telephone) <= 30) {
                     if (strlen($interets) <= 150) {
                         if (strlen($langues) <= 60) {
-                            $insert = $bdd->prepare('INSERT INTO cv(nom, prenom, formations, experienceProfessionnelle, competences, noTelephone, email, centresInteret , langues, idClient) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+                            $insert = $bdd->prepare('INSERT INTO cv(nom, prenom, formations, experienceProfessionnelle, competences, noTelephone, email, 
+                            centresInteret , langues, idClient) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
                             $insert->execute(array(
                                 $data['nom'],
                                 $data['prenom'],
