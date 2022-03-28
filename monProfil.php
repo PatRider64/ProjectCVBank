@@ -42,7 +42,7 @@
                         ?>
                         <div class="text-center">
                             <h2>Bonjour <?php echo $data['prenom'], ' ', $data['nom']; ?> !</h2><br>
-                            <a href="voirCV.php?idClient=<?=$data['idClient']?>">Voir votre CV</a>
+                            <a href="voirCV.php?idClient=<?= $data['idClient']?>">Voir votre CV</a>
                             <a href="creationCV.php">Créez votre CV</a>
                             <hr/>
                             <a href="deconnexion.php" class="btn btn-danger btn-lg">Déconnexion</a>
