@@ -35,20 +35,6 @@
                                     $langues,
                                     $data['idClient'],
                                 ));
-                                $sql = $bdd->prepare('SELECT * from cv where idClient = :idClient');
-                                $sql->bindParam("idClient", $data["idClient"]);
-                                $sql->execute();
-                                $dataCV = $sql->fetch();
-
-                                ob_start();
-                                $html = ob_get_contents();
-                                ob_end_clean();
-
-                                $dompdf = new Dompdf();
-                                $dompdf->loadHtml($html);
-                                $dompdf->render();
-                                $fichier = 'mon-Cv.pdf';
-                                $dompdf->stream($fichier);
                                 header('Location:creationCV.php?reg_err=success');
                                 die();
                             } else {
@@ -76,4 +62,3 @@
             die();
         }
     }
-?>
